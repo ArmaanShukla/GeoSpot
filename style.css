@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+}
+
+header {
+    background: #1e88e5;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+.controls {
+    text-align: center;
+    padding: 15px;
+}
+
+button {
+    background: #1e88e5;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    margin: 6px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #1565c0;
+}
+
+#map {
+    width: 90%;
+    height: 500px;
+    margin: 20px auto;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+}

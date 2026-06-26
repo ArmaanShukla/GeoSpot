@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GeoSpot - Nearby Places Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>GeoSpot</h1>
+        <p>Discover nearby places using your current location</p>
+    </header>
+
+    <main>
+        <section class="controls">
+            <button onclick="getUserLocation()">Find My Location</button>
+        </section>
+
+        <section id="map"></section>
+    </main>
+
+    <script src="script.js"></script>
+
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHA8u-AZlqDP4QbtzqlUXTER_js6VJ9SA&callback=initMap">
+    </script>
+</body>
+</html>
