@@ -50,3 +50,4 @@ The application is deployed on an Amazon EC2 Ubuntu instance using Nginx.
 ## Note
 
 The project is designed to use Google Places API for live nearby search. During development, demo nearby location data was used because Google Cloud billing was not active.
+Project updated using Jenkins CI/CD Pipeline.
