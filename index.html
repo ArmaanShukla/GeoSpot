@@ -13,6 +13,11 @@
     <main>
         <section class="controls">
             <button onclick="getUserLocation()">Find My Location</button>
+            <button onclick="searchNearbyPlaces('restaurant')">Restaurants</button>
+            <button onclick="searchNearbyPlaces('cafe')">Cafes</button>
+            <button onclick="searchNearbyPlaces('hospital')">Hospitals</button>
+            <button onclick="searchNearbyPlaces('atm')">ATMs</button>
+            <button onclick="searchNearbyPlaces('park')">Parks</button>
         </section>
 
         <section id="map"></section>
@@ -21,7 +26,7 @@
     <script src="script.js"></script>
 
     <script async
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHA8u-AZlqDP4QbtzqlUXTER_js6VJ9SA&callback=initMap">
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHA8u-AZlqDP4QbtzqlUXTER_js6VJ9SA&libraries=places&callback=initMap">
     </script>
 </body>
 </html>
