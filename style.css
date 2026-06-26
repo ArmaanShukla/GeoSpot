@@ -6,24 +6,31 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #f4f7fb;
+    background: #eef4fb;
     color: #222;
 }
 
 header {
-    background: #1e88e5;
+    background: linear-gradient(135deg, #1565c0, #1e88e5);
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 25px 15px;
 }
 
 header h1 {
+    font-size: 36px;
     margin-bottom: 8px;
+}
+
+header p {
+    font-size: 16px;
 }
 
 .controls {
     text-align: center;
-    padding: 15px;
+    padding: 18px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 button {
@@ -32,19 +39,67 @@ button {
     border: none;
     padding: 12px 18px;
     margin: 6px;
-    border-radius: 6px;
+    border-radius: 25px;
     cursor: pointer;
     font-size: 15px;
 }
 
 button:hover {
-    background: #1565c0;
+    background: #0d47a1;
+}
+
+.layout {
+    display: flex;
+    width: 95%;
+    margin: 20px auto;
+    gap: 20px;
 }
 
 #map {
-    width: 90%;
-    height: 500px;
-    margin: 20px auto;
-    border-radius: 10px;
+    flex: 3;
+    height: 520px;
+    border-radius: 12px;
     border: 2px solid #ccc;
+}
+
+#places-list {
+    flex: 1;
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    height: 520px;
+    overflow-y: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+#places-list h2 {
+    color: #1565c0;
+    margin-bottom: 12px;
+}
+
+.place-card {
+    padding: 12px;
+    margin-bottom: 10px;
+    background: #f4f7fb;
+    border-left: 4px solid #1e88e5;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    background: #1565c0;
+    color: white;
+    padding: 12px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    #map,
+    #places-list {
+        width: 100%;
+    }
 }

@@ -97,6 +97,7 @@ function searchNearbyPlaces(placeType) {
         });
 
         placeMarkers.push(marker);
+        addPlaceToList(place.name, placeType);
     });
 }
 
@@ -105,4 +106,20 @@ function clearPlaceMarkers() {
         marker.setMap(null);
     });
     placeMarkers = [];
+const placesList = document.getElementById("places-list");
+placesList.innerHTML = "<h2>Nearby Places</h2><p>Select a category to view places.</p>";
+}
+
+function addPlaceToList(placeName, placeType) {
+    const placesList = document.getElementById("places-list");
+
+    if (placesList.querySelector("p")) {
+        placesList.innerHTML = `<h2>Nearby ${placeType}s</h2>`;
+    }
+
+    const card = document.createElement("div");
+    card.className = "place-card";
+    card.innerHTML = `<strong>${placeName}</strong><br>Category: ${placeType}`;
+
+    placesList.appendChild(card);
 }
